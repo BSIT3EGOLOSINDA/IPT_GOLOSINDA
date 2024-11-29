@@ -1,0 +1,410 @@
+@font-face {
+	font-family: Modak-Regular;
+	src: url(src/fonts/Modak-Regular.ttf);
+}
+@font-face {
+	font-family: ComingSoon-Regular;
+	src: url(src/fonts/ComingSoon-Regular.ttf);
+}
+/*	This is the main Stylesheet	*/
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #fefae0;
+    overflow-x: hidden;
+    background-size: 300% 300%;
+	background-image: linear-gradient(-45deg, #FFF199 0%, #EDFCB8 25%, #FCE2B8 51%, #fefae0 100%);
+	-webkit-animation: AnimateBG 20s ease infinite;
+     animation: AnimateBG 20s ease infinite;
+}
+a {
+	text-decoration: none;
+}
+  
+
+@-webkit-keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+    display: flex;
+}
+#header {
+    justify-content: space-between;
+}
+.logo {
+    margin: 20px;
+    padding: 20px;
+    vertical-align: middle;
+}
+.logo img  {
+    width: 80px;
+    object-fit: contain;
+}
+.nav-button {
+	display: flex;
+    margin: 20px;
+    padding: 20px;
+    height:  40px;
+    width: 40px;
+	cursor: pointer;
+	border-radius: 10px;
+    vertical-align: middle;
+	align-content: center;
+	align-items: center;
+	transition: 0.250s ease-in;
+	border: 0px solid transparent;
+	box-shadow: 0px 0px 0px #fefae0;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	background: rgba(221, 161, 94, 0.3);
+}
+.nav-button:hover {
+	background: rgba(221, 161, 94, 0.5);
+	border: 0px solid #bc6c25;
+	width: 300px;
+}
+.nav-button:hover button {
+	display: flex;
+	opacity: 1;
+}
+.nav-button img {
+    width: 40px;
+    object-fit: contain;
+}
+.nav-button button {
+    display: flex;
+    opacity: 0;
+    margin: 0px;
+    transition: .25s 0s ease-out;
+    background: transparent;
+    border: 0px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px black;
+}
+.nav-button button:hover {
+	box-shadow: 0px 0px 2px #000000;
+}
+
+/* Main Content */
+
+#title {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#title h1 {
+    color: #606c38;
+    font-size: 70px;
+    font-family: 'Modak-Regular';
+    font-weight: 900;
+    text-align: center;
+    margin: 10px;
+}
+#title h2 {
+    margin: 10px;
+    color: #283618;
+    text-align: center;
+    font-family: 'ComingSoon-Regular';
+}
+#title button {
+	border: 0px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px black;
+    color: #fefae0;
+    background-color: #bc6c25;
+    background: ;
+    font-family: 'ComingSoon-Regular';
+    font-size: 20px;
+    margin: 10px;
+    padding: 0.5em;
+    transition: 0.25s ease-out;
+}
+#title button:hover {
+    background-color: #E88C5B;
+    color: #EBFFCA;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
+#carousel {
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: #606c38;
+    font-family: 'Modak-Regular';
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+    transition: 0.125s ease-out;
+}
+#carousel-item {
+    justify-content: space-between;
+    align-items: center;
+}
+.carousel-items {
+    border-radius: 10px;
+    background-color: rgba(254,250,225, 0.5);
+    margin: 50px;
+    padding: 10px;
+    box-shadow: 0px 0px 0px black;
+    transition: 0.25s ease-out;
+}
+.carousel-items:hover {
+	box-shadow: 0px 0px 5px black;
+	margin-right: 100px;
+	margin-left: 0px;
+} 
+.carousel-items img {
+    width: 350px;
+    height: 300px;
+    object-fit: contain;
+}
+.carousel-items h3 {
+	color: #606c38;
+	text-decoration: none;
+}
+.carousel-items h3:active {
+	text-decoration: none;
+}
+/*	About Page	*/
+#about-container {
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10% 50px 10%;
+    border: 5px solid rgba(221, 161, 94, 1.0);
+    border-radius: 50px;
+    background-color: rgba(221, 161, 94, 0.3);
+    box-shadow: 0px 0px 0px black;
+    transition: 0.25s ease-out;
+}
+#about-container:hover {
+    border: 5px solid rgba(221, 161, 94, .5);
+	background-color: rgba(221, 161, 94, 0.5);
+	box-shadow: 20px 30px 0px black;
+	margin: 10px 11% 50px 9%;
+}
+#about-container h1 {
+    color: #606c38;
+    font-size: 50px;
+    font-family: 'Modak-Regular';
+    font-weight: 900;
+    text-align: center;
+    margin: 50px ;
+}
+#about-container h2 {
+    margin: 20px 10% 70px 10%;
+    color: #283618;
+    text-align: justify;
+    font-family: 'ComingSoon-Regular';
+}
+#mypic {
+	border-radius: 50% 50% 10px 10px;
+	margin: 100px;
+}
+
+/*	Contact Page	*/
+#socials-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+#socials-container svg  {
+	margin: 20px;
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+/*	Portfolio Page	*/
+#ppt-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#ppt-container h1 {
+    color: #606c38;
+    font-size: 70px;
+    font-family: 'Modak-Regular';
+    font-weight: 900;
+    text-align: center;
+    margin: 10px;
+}
+#ppt-container h2 {
+    margin: 10px;
+    color: #283618;
+    text-align: center;
+    font-family: 'ComingSoon-Regular';
+}
+#ppts {
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin: 50px;
+}
+#ppts img {
+	width: 30%;
+	margin: 10px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px black;
+	transition: 0.25s ease-out;
+}
+#ppts img:hover {
+	box-shadow: 0px 0px 5px black;
+	margin-right: 100px;
+}
+#edits-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#edits-container h1 {
+    color: #606c38;
+    font-size: 70px;
+    font-family: 'Modak-Regular';
+    font-weight: 900;
+    text-align: center;
+    margin: 10px;
+}
+#edits-container h2 {
+    margin: 10px;
+    color: #283618;
+    text-align: center;
+    font-family: 'ComingSoon-Regular';
+}
+#edits {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#edits button {
+	border: 0px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px black;
+    color: #fefae0;
+    background-color: #bc6c25;
+    background: ;
+    font-family: 'ComingSoon-Regular';
+    font-size: 20px;
+    margin: 10px;
+    padding: 0.5em;
+    transition: 0.25s ease-out;
+}
+#edits button:hover {
+    background-color: #E88C5B;
+    color: #EBFFCA;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
+#edits img {
+	width: 40%;
+	margin: 10px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px black;
+	transition: 0.25s ease-out;
+}
+#pages {
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+#pages h1 {
+    color: #606c38;
+    font-size: 70px;
+    font-family: 'Modak-Regular';
+    font-weight: 900;
+    text-align: center;
+    margin: 10px;
+}
+#pages h2 {
+    margin: 10px;
+    color: #283618;
+    text-align: center;
+    font-family: 'ComingSoon-Regular';
+}
+#pages-container {
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    margin-bottom: 0px;
+}
+#pages-container img {
+	width: 30%;
+	margin: 50px;
+	margin-bottom: 0px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px black;
+	transition: 0.25s ease-out;
+}
+#pages-link {
+	width: 80%;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+#pages-link button {
+	border: 0px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px black;
+    color: #fefae0;
+    background-color: #bc6c25;
+    background: ;
+    font-family: 'ComingSoon-Regular';
+    font-size: 20px;
+    margin: 10px;
+    padding: 0.5em;
+    transition: 0.25s ease-out;
+}
+#pages-link button:hover {
+    background-color: #E88C5B;
+    color: #EBFFCA;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
+#vector-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#vector-container h1 {
+    color: #606c38;
+    font-size: 70px;
+    font-family: 'Modak-Regular';
+    font-weight: 900;
+    text-align: center;
+    margin: 10px;
+}
+#vector-container h2 {
+    margin: 10px;
+    color: #283618;
+    text-align: center;
+    font-family: 'ComingSoon-Regular';
+}
+.vectors {
+	width: 50%;
+	margin: 50px;
+}
